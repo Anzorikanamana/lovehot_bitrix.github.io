@@ -55,8 +55,9 @@ body {
 	font: 12px/18px 'PragmaticaRegular', Arial, Tahoma, Verdana, sans-serif;
 /*	width: 100%;
 	min-width: 1083px;*/
-	background:#f4f4f4;
+	/*background:#f4f4f4;*/
 	color:#000;
+	overflow-x: hidden;
 }
 a {
 	color: blue;
@@ -213,9 +214,9 @@ h2{
 
 .wrapper {
 	max-width: 1083px;
-    width: 100%;
-    margin: 0 auto;
-	overflow:hidden;
+	width: 100%;
+	margin: 0 auto;
+	/*overflow:hidden;*/
 	position:relative;
 	
 	background-image: linear-gradient(bottom, rgb(254,254,254) 18%, rgb(241,241,241) 60%);
@@ -238,26 +239,27 @@ h2{
 /* Header
 -----------------------------------------------------------------------------*/
 header[role="banner"]{
-	height: 1000px;
-	width: 1083px;
+	height: 341px;
+	max-width: 1083px;
+	width: 100%;
 	margin: 0 auto;
 	position:relative;
 	*z-index:3;
+
 }
 
 h1.logo{
-    position: relative;
-    /* left: 0; */
-    /* top: 0; */
-    width: 331px;
-    height: 248px;
-    /* text-indent: -9999px; */
-    font-size: 0;
-    background: url(../img/logo.png) -45px 0% no-repeat;
+	position:absolute;	
+	left:-47px;
+	top:0;
+	width:339px;
+	height:248px;
+	text-indent:-9999px;
+	background:url(../img/logo.png) no-repeat;
 }
 
 h1.logo:hover{
-	background-position: -45px 100%;
+	background-position: left -248px;
 }
 
 h1.logo a{
@@ -266,14 +268,13 @@ h1.logo a{
 }
 
 .h_shipping{
-    position: relative;
-    /* top: 34px; */
-    /* right: -27px; */
-    width: 254px;
-    /* height: 111px; */
-    background: url(../img/russian_post.png) no-repeat;
+	position:absolute;
+	top:34px;
+	right:-27px;
+	width:254px;
+	height:111px;
+	background:url(../img/russian_post.png) no-repeat;
     font-family: 'century-gothic';
-    z-index: 99;
 }
 
 .h_shipping:hover{
@@ -292,13 +293,13 @@ h1.logo a{
 }
 
 .h_ships_free{
-	position: relative;
-    /* top: 0; */
-    /* left: 287px; */
-    width: 605px;
-    height: 118px;
-    background: url(../img/free_shipping.png) no-repeat;
-    z-index: 99;
+	position:absolute;
+	top:0;
+	/*left:287px;*/
+	left: 26.5%;
+	width:605px;
+	height:118px;
+	background:url(../img/free_shipping.png) no-repeat;
 }
 
 .h_ships_free:hover{
@@ -312,13 +313,11 @@ h1.logo a{
 }
 
 .h_contacts{
-    position: relative;
-    /* top: 92px; */
-    /* left: 422px; */
-    z-index: 2;
-}
-.h_contacts h1 + p {
-    display: none;
+	position:absolute;
+	top: 92px;
+/*	left:422px;*/
+    left: 39%;
+	z-index:2;
 }
 
 .h_contacts .phone{
@@ -350,7 +349,8 @@ h1.logo a{
 .h_op{
 	position:absolute;
 	top:107px;
-	left:236px;
+/*	left:236px;*/
+	left: 21.8%;
 	width:197px;
 	text-align:right;
 	z-index:4;
@@ -385,7 +385,8 @@ h1.logo a{
 .search_form{
 	position:absolute;
 	top:230px;
-	left:422px;
+	/*left:422px;*/
+	right: 26%;
 	width:385px;
 	z-index:3;
 }
@@ -518,29 +519,31 @@ h1.logo a{
 
 nav {
 	padding-top:47px;
-	width:1081px;
+	padding-bottom: 228px;
+	max-width: 1081px;
+	width: 100%;
 	position:absolute;
 	left:0;
-	top:872px;
+	top:227px;
 	background:url(../img/nav_top_glow.png) left top repeat-x;
 	z-index:2;
 }
 
 nav ul{
-	height:65px;
-	border:1px solid #b1b1b1;
-	background:url(../img/nav_bg.png) 0 0 repeat-x;
-	border-radius:6px;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	display:block;
-	padding-left:20px;
-	position:relative;
+    /* height: 65px; */
+    border: 1px solid #b1b1b1;
+    background: linear-gradient(to top, #ccc, #fff);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    position: relative;
 }
 
 nav ul li{
 	padding-left:2px;
-	float:left;
+/*	float:left;*/
 	vertical-align:middle;
 	height:65px;
 	background:url(../img/nav_sep.png) left center no-repeat;
@@ -791,7 +794,7 @@ nav ul a:hover, nav ul .active a{
 }
 
 .callback_form {
-	padding: 50px 0 0;
+	padding: 50px 0 15px;
 }
 
 .callback_form .form_line{
@@ -871,8 +874,10 @@ nav ul a:hover, nav ul .active a{
 /* Middle
 -----------------------------------------------------------------------------*/
 .middle {
-	width: 1083px;
-	margin: 0 auto;
+    display: flex;
+    max-width: 1083px;
+    width: 100%;
+    margin: 0 auto;
 	padding: 0 0 20px;
 	height: 1%;
 	position: relative;
@@ -882,26 +887,44 @@ nav ul a:hover, nav ul .active a{
 }
 
 .container {
-	width: 100%;
-	float: left;
+/*	width: 100%;
+	float: left;*/
+	max-width: 77.5623%;
+    width: 100%;
+    /* float: left; */
+    order: 2;
 }
 .content {
-	padding: 30px 0 0 260px;
+	/*padding: 30px 0 0 260px;
 	position:relative;
-	z-index:2;
+	z-index:2;*/
+	max-width: 820px;
+    width: 100%;
+	padding: 30px 0 0 20px;
+    float: right;
+    position: relative;
+    z-index: 2;
 }
 
 .brands_block{
-	position:relative;
-	width:805px;
+/*	position:relative;
+    max-width: 805px;
+    width: 100%;*/
+	display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 805px;
+    width: 100%;
 	background: url(../img/brands_bg_bottom.png) no-repeat left bottom, url(../img/brands_bg_top.png) no-repeat, #fff url(../img/brands_bg_middle.png) repeat-y;
 	-pie-background: url(/img/brands_bg_bottom.png) no-repeat left bottom, url(/img/brands_bg_top.png) no-repeat, #fff url(/img/brands_bg_middle.png) repeat-y;
 }
 
 .brands_block li{
-	height:90px;
-	padding:0 0 1px;
-	*padding-bottom:0;
+	/*height:90px;*/
+    padding: 0 0 1px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .brands_block div{
@@ -957,11 +980,11 @@ nav ul a:hover, nav ul .active a{
 }
 
 .carousele_box .btn.prev{
-	left:-11px;
+    left: -11px;
 }
 
 .carousele_box .btn.next{
-	right:-2px;
+	right: 2px;
 	background-position:-36px 0;
 }
 
@@ -979,19 +1002,24 @@ nav ul a:hover, nav ul .active a{
 }
 
 .c_carousele{
+    width: 808px !important;
 	padding: 30px 0 35px;
 	margin: 0 0 -53px;
 	top: -18px;
 }
 
 .c_carousele li{
-	width:158px;
-	height:280px;
+/*	width:158px;
+	height:280px;*/
 	text-align:center;
-	float:left;
-	margin:0 19px 0 25px;
+/*	float:left;*/
+	/*margin:0 19px 0 25px;*/
+/*	margin: 0 19px 0 20px;*/
 	overflow:visible !important;
-	position:relative;
+    width: 202px !important;
+    padding: 0 10px !important;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .c_carousele .pic{
@@ -1014,7 +1042,8 @@ nav ul a:hover, nav ul .active a{
 }
 
 .c_carousele .pic:hover{
-	margin:0 0 13px -2px;
+	/*margin:0 0 13px -2px;*/
+	margin-bottom: 13px;
 	top:-2px;
 	border:2px solid #e0e0e0;
 	box-shadow:#fff 0 1px 50px 15px;
@@ -1068,15 +1097,21 @@ nav ul a:hover, nav ul .active a{
 }
 
 .sexy_carousele{
+	width: 656px !important;
 	padding:10px 0 35px 0;
+	margin: 0 auto;
 	margin-bottom:-23px;
-	margin-right:-1px;
+/*	margin-right:-1px;*/
 }
 
 .sexy_carousele li{
+	width: 150px !important;
+    margin: 0 !important;
+    padding: 0 5px;
+    padding-left: 9px;
 	text-align:center;
-	width:146px;
-	margin:0 9px;
+/*	width:146px;
+	margin:0 9px;*/
 	float:left;
 	position:relative;
 	overflow: visible !important;
@@ -1139,13 +1174,13 @@ nav ul a:hover, nav ul .active a{
 	margin-right: 12px;
 }
 
-.product_list.sexy .btn{
-	top:55px;
-	right:-6px;
+.product_list.sexy .btn.next {
+    top: 85px;
+    right: 0;
 }
 
-.product_list.sexy .btn.prev{
-	left:-19px;
+.product_list.sexy .btn.prev {
+	left: 0;
 }
 
 .news_block{
@@ -1161,20 +1196,27 @@ nav ul a:hover, nav ul .active a{
 }
 
 .news_block .news_bg{
+	display: flex;
+    justify-content: space-around;
 	padding-left:26px;
 	color:#fff;
 	padding-top:15px;
+	padding-bottom: 15px;
 	position:relative;
-	width:795px;
-	height: 182px;
+/*	width:795px;*/
+    max-width: 795px;
+    width: 100%;
+	min-height: 182px;
 	background:url(../img/news_bg.png) no-repeat;
+	background-size: cover;
 }
 
 .news_block .article{
 	position:relative;
 	width:210px;
 	padding-left:78px;
-	margin-left:74px;
+	padding-right: 30px;
+	/*margin-left:74px;*/
 	float:left;
 }
 
@@ -1210,7 +1252,7 @@ nav ul a:hover, nav ul .active a{
 	color:#fff;
 	font-size:15px;
 	position:absolute;
-	right:24px;
+	right:8%;
 	bottom:18px;
 	border-bottom:#fff dashed 1px;
 }
@@ -1352,12 +1394,19 @@ nav ul a:hover, nav ul .active a{
 /* Sidebar Left
 -----------------------------------------------------------------------------*/
 .sideLeft {
-	float: left;
+	/*float: left;
 	width: 233px;
 	margin-left: -100%;
 	position: relative;
 	padding:31px 15px 0 2px;
-	z-index:3;
+	z-index:3;*/
+	/*float: left;*/
+    min-width: 233px;
+    /* margin-left: -100%; */
+    position: relative;
+    padding: 31px 5px 0 2px;
+    z-index: 3;
+    order: 1;
 }
 
 .l_menu {
@@ -3161,4 +3210,110 @@ label.error {
 .bn372d {
 	width: 372px;
 	max-height: 60px;
+}
+
+@media screen and (max-width: 1100px) {
+	.c_carousele {
+		max-width: 628px !important;
+		margin: 0 auto;
+		margin-bottom: -53px;
+	}
+	.carousele_box .btn.prev {
+	    left: 0;
+	}
+	.carousele_box .btn.next { 
+		right: 0;
+	}
+	.carousele_box .btn {
+	    top: 85px;
+	}
+	.carousele_box ul {
+		padding-left: 11px !important;
+	}
+	.c_carousele li {
+		width: 202px !important;
+		padding: 0 10px !important;
+	}
+
+}
+@media screen and (max-width: 1000px) {
+	.sign_in_block {
+	    background: url(../img/discount.png) 30% 50% no-repeat;
+	}
+	.search_form {
+		right: 30%;
+	}
+	.h_contacts {
+	    top: 110px;
+	    left: calc(50% - 162px);
+	}
+	.h_op {
+	    top: 93px;
+	    left: calc(50% - 98.5px);
+	}
+	.h_ships_free {
+	    left: calc(50% - 302.5px);
+	}
+	.news_block .news_bg {
+	    display: flex;
+		justify-content: center;
+		width: 93%;
+	}
+	.news_block .article {
+	    margin-right: 3%;
+	}
+}
+@media screen and (max-width: 940px) {
+	.c_carousele {
+    	max-width: 426px !important;
+	}
+	.news_block .news_bg {
+	    justify-content: flex-start;
+	}
+	.news_block .all_news {
+		right: 15%;
+		bottom: 10px;
+	}
+	.news_block .news_bg {
+    	flex-direction: column;
+    	align-items: center;
+    }
+    .news_block .article {
+    	width: 70%;
+    	/*margin-right: 12%;*/
+	}
+}
+
+@media screen and (max-width: 886px) {
+	.search_form {
+	    right: 35%;
+	}
+	h1.logo {
+	    top: 10px;
+	}
+	.sign_in_block {
+	    background: url(../img/discount.png) 45% 50% no-repeat;
+	}
+	.h_contacts h1 {
+	    transform: scale(0.7);
+	}
+	.h_shipping {
+	    background: url(../img/russian_post.png) 35% -17% no-repeat;
+	}
+	.h_shipping:hover {
+	    background-position: 35% 113%;
+	}
+	.sign_in_block {
+	    background: url(../img/discount.png) 40% 80% no-repeat;
+	    background-size: 90px 65px;
+	}
+	.h_contacts .e_mail {
+	    transform: scale(0.7);
+	}
+	h1.logo {
+	    transform: scale(0.8);
+	}
+	.search_form {
+	    right: 40%;
+	}
 }
