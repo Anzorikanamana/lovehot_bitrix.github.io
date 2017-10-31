@@ -56,10 +56,11 @@ $APPLICATION->SetTitle("СЕКС ШОП онлайн интернет магазин для взрослых в Москве |
   <h2>Популярные</h2>
  
   <div class="carousele_box" id="carousel_1"> 
-
+		<div class="btn next"></div>
+    	<div class="btn prev"></div>
     <div class="c_carousele"> 		
-		    <div class="btn next"></div>
-    		<div class="btn prev"></div>
+		    <div class="btn next adapt"></div>
+    		<div class="btn prev adapt"></div>
 <?$APPLICATION->IncludeComponent(
 	"love:store.catalog.random.index",
 	"main",
@@ -83,12 +84,11 @@ $APPLICATION->SetTitle("СЕКС ШОП онлайн интернет магазин для взрослых в Москве |
   <h2>Новинки</h2>
  
   <div class="carousele_box" id="carousel_2"> 
-
-   		 
-    <div class="c_carousele"> 
 	    <div class="btn next"></div>
-   	 
-    <div class="btn prev"></div>
+		<div class="btn prev"></div>
+    <div class="c_carousele"> 
+	    <div class="btn next adapt"></div>
+		<div class="btn prev adapt"></div>
 		<?$APPLICATION->IncludeComponent(
 	"love:store.catalog.random.index",
 	"main_new",
@@ -112,12 +112,11 @@ $APPLICATION->SetTitle("СЕКС ШОП онлайн интернет магазин для взрослых в Москве |
   <h2>Эксклюзив</h2>
  
   <div class="carousele_box" id="carousel_3"> 
-
-   		 
-    <div class="c_carousele"> 
 	    <div class="btn next"></div>
-   	 
-    <div class="btn prev"></div>
+		<div class="btn prev"></div>
+    <div class="c_carousele"> 
+	    <div class="btn next adapt"></div>
+		<div class="btn prev adapt"></div>
 		<?$APPLICATION->IncludeComponent(
 	"love:store.catalog.random.index",
 	"main_ex",
@@ -141,12 +140,11 @@ $APPLICATION->SetTitle("СЕКС ШОП онлайн интернет магазин для взрослых в Москве |
   <h2>Be Sexy</h2>
  
   <div class="carousele_box" id="carousel_4"> 
-
-
-    <div class="sexy_carousele"> 
 	    <div class="btn next"></div>
-   
-    <div class="btn prev"></div>
+		<div class="btn prev"></div>
+    <div class="sexy_carousele"> 
+	    <div class="btn next adapt"></div>
+		<div class="btn prev adapt"></div>
 <?$APPLICATION->IncludeComponent(
 	"love:store.catalog.random.index", 
 	"by_sexy", 
