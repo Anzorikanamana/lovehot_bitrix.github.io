@@ -55,7 +55,7 @@ body {
 	font: 12px/18px 'PragmaticaRegular', Arial, Tahoma, Verdana, sans-serif;
 /*	width: 100%;
 	min-width: 1083px;*/
-	/*background:#f4f4f4;*/
+	background:#f4f4f4;
 	color:#000;
 	overflow-x: hidden;
 }
@@ -3252,7 +3252,12 @@ label.error {
 	.sexy_carousele ul {
 	    padding-left: 11px !important;
 	}
-
+	.f_contacts {
+    left: calc(50% - 265px);
+  }
+  .f_contacts_link {
+		left: calc(60% - 28px);
+  }
 }
 @media screen and (max-width: 1000px) {
 	.sign_in_block {
@@ -3281,24 +3286,23 @@ label.error {
 	    margin-right: 3%;
 	}
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 950px) {
 	.c_carousele {
     	max-width: 426px !important;
 	}
 	.news_block .news_bg {
-	    justify-content: flex-start;
+			justify-content: flex-start;
+			flex-direction: column;
+			align-items: center;
 	}
 	.news_block .all_news {
 		right: 15%;
 		bottom: 10px;
 	}
-	.news_block .news_bg {
-    	flex-direction: column;
-    	align-items: center;
-    }
-    .news_block .article {
-    	width: 70%;
-    	/*margin-right: 12%;*/
+  .news_block .article {
+		width: 70%;
+		margin-bottom: 20px;
+		/*margin-right: 12%;*/
 	}
 	.sexy_carousele {
     	width: 492px !important;
