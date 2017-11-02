@@ -3412,9 +3412,6 @@ h2{
 
 /**************************************************************************/
 		/*Togle Menu end*/
-		.menu_show {
-			display: block;
-		}
 		.toggle_mnu {
 			display: block;
 			position: relative;
@@ -3457,7 +3454,7 @@ h2{
 		}
 		.toggle_mnu.on span {
 			background-color: transparent;
-			background: linear-gradient(to top, #fff, #fff);
+			background: transparent;
 		}
 		.toggle_mnu.on span:before {
 			-webkit-transform: rotate(45deg) translate(-1px, 0px);
@@ -3471,8 +3468,9 @@ h2{
 		}
 		/*Togle Menu end*/
 		.mobile_menu_container {
-    	position: absolute;
-    	top: 0;
+			display: none;
+			position: absolute;
+			top: 0;
 		}
 		.navigation_mobile ul {
 			display: flex;
@@ -3510,6 +3508,7 @@ h2{
 		}
 		.l_menu > ul > li {
 			height: auto;
+				list-style: none;
 		}
 		.l_menu .level_two ul {
 			padding: 0;
@@ -3517,11 +3516,24 @@ h2{
 		}
 		.top_mnu {
 			transition: all 0.3s ease;
-			padding-top: 50px;
+			padding-top: 40px;
 			text-transform: uppercase;
 			background: #ececec;
 			width: 260px;
 			height: 100%;
+		}
+		a.menu_part_name {
+		    margin-left: -5px;
+		    color: #000;
+		    text-decoration: none;
+		}
+		.menu_part_name {
+		    display: block;
+		    font-size: 16px;
+		    padding: 15px;
+		    width: 260px;
+		    background-color: #ccc;
+		    box-sizing: border-box;
 		}
 
 
@@ -3545,8 +3557,9 @@ h2{
 
 
 
-
-
+		.menu_show {
+			display: block;
+		}
 
 	}
 	@media screen and (max-width: 720px) {
