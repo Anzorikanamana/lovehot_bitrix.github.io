@@ -14,6 +14,42 @@ $(document).ready(function() {
 
   }
 
+  var main_menu = document.querySelector("section.l_menu")
+  var ctg_item = document.querySelectorAll("a.menu_part_name_sub")
+
+
+  $(".menu_part_name").click(function(event) {
+    event.preventDefault();
+    main_menu.classList.remove("main_menu");
+    $(this).parents(".sub_mnu").find(".hide_menu").toggleClass("menu_show");
+    // $(this).closest(".hide_menu").toggleClass("menu_show");
+  });
+
+  $(".menu_part_name_sub").click(function(event) {
+    event.preventDefault();
+    $(this).parents(".l_menu").find(".hide_menu_sub > li > .mnu_catagory_btn").toggleClass("sub_mnu_arrow");
+    $(this).toggleClass("ctg_item_active");
+    $(this).parents(".l_menu").find(".hide_menu_sub").toggleClass("menu_show");
+  });
+
+  $(".mnu_catagory_btn").click(function(event) {
+    event.preventDefault();
+    $(this).toggleClass("mnu_catagory_btn_active");
+    $(this).parent("li").find(".level_two").toggleClass("menu_show");
+  });
+
+
+
+  // var hide_submnu = document.querySelectorAll(".hide_menu"); //скрытое меню
+  // var top_mnubtn = document.querySelectorAll(".menu_part_name");// кнопка по которой открывается
+
+  // if ($(".menu_part_name").length > 0) {
+  //   top_mnubtn.addEventListener("click", function(event) {
+  //    event.preventDefault();
+  //    hide_submnu.classList.toggle("menu_show");
+  // })
+  // };
+
   $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
   //Checks if li has sub (ul) and adds class for toggle icon - just an UI
 
