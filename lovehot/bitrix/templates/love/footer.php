@@ -3,7 +3,7 @@ IncludeTemplateLangFile(__FILE__);
 ?>
 				</div><!-- .content-->
 		</div><!-- .container-->
-
+		
 		<div class="sideLeft" role="complementary">
 		
 			<?$APPLICATION->IncludeComponent("bitrix:catalog.section.list", "left_menu", Array(
