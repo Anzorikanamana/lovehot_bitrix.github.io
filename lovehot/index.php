@@ -355,7 +355,7 @@ $APPLICATION->SetTitle("СЕКС ШОП онлайн интернет магазин для взрослых в Москве |
 		"CACHE_NOTES" => ""
 	)
 );?></aside><aside class="c_banner"></aside><aside class="c_banner"></aside> 
-      <div style="clear: both; font-size: medium; line-height: 1.4; "> <?$APPLICATION->IncludeComponent(
+      <div style="clear: both; font-size: medium; line-height: 1.4; padding-right: 20px"> <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
