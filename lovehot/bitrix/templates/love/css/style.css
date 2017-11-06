@@ -2829,11 +2829,11 @@
 	    left: 0;
 	    z-index: 10;
 	    display: none;
-	    margin-top: 210px;
+	    /*margin-top: 210px;*/
 	    width: 100%;
 	    height: 100%;
-	    background-color: rgba(175, 59, 141, 0.8);
-	    opacity: 0.902;
+	    background-color: rgba(175, 59, 141, 0.7);
+	    /*opacity: 0.902;*/
 	}
 	@media screen and (max-width: 1100px) {
 		.container {
@@ -3044,6 +3044,7 @@
 	}
 	@media screen and (max-width: 840px) {
 		.container {
+			width: 99%;
     		max-width: none;
 		}
 		.brands_block {
@@ -3062,7 +3063,7 @@
 			float: none;
 			width: 540px;
 			margin: 0 auto;
-	}
+		}
 	    .f_contacts,
 	    .f_contacts_link,
 	    .f_social_btn,
@@ -3070,7 +3071,7 @@
 	        margin-top: 135px;
 	    }
 	    .footer_wrap {
-	        min-height: 383px;
+	        min-height: 340px;
 	    }
 	    .f_logo {
 	        width: 260px;
@@ -3105,7 +3106,7 @@
 			display: none;
 		}
 		a.toggle_mnu.on {
-		z-index: 4;
+		z-index: 100;
 		}
 		.h_card,
 		.search_form {
@@ -3113,6 +3114,9 @@
 			}
 		.middle {
 			z-index: 1;
+		}
+		.m_menu_show {
+			top: 0;
 		}
 /**************************************************************************/
 		/*Togle Menu end*/
@@ -3175,7 +3179,7 @@
 			display: none;
 			position: absolute;
 			top: 0;
-			z-index: 3;
+			z-index: 99;
 		}
 		.navigation_mobile ul {
 			display: flex;
@@ -3203,8 +3207,10 @@
 			display: flex;
 			flex-direction: column;
 			position: relative;
-    	left: 0px;
-    	width: 235px;
+	    	left: 0px;
+			width: 235px;
+			padding: 10px 0 5px;
+			margin-bottom: 2px;
 		}
 		.l_menu > ul > li:hover,
 		.l_menu .active {
@@ -3219,10 +3225,13 @@
 		.l_menu .level_two ul {
 			padding: 0;
 			padding-left: 13px;
+		    width: 93%;
+		    background: none;
+		    height: auto !important;
 		}
 		.top_mnu {
 			transition: all 0.3s ease;
-			padding-top: 80px;
+			padding-top: 40px;
 			text-transform: uppercase;
 			background: #ececec;
 			width: 318px;
@@ -3246,25 +3255,41 @@
 		    box-sizing: border-box;
 		    margin-bottom: 15px;
 		}
+		.l_menu {
+		    margin: 0 0 10px;
+		}
+		.l_menu.hide_menu {
+			margin-bottom: 25px;
+		}
+		.l_menu header {
+			background: none;
+			border-bottom: 1px solid #ad3b8d;
+		}
+		.brands_menu:last-child header {
+			border-bottom: none;
+		}
 		.l_menu header a {
 		    display: block;
 		    width: 260px;
-		    box-sizing: border-box;
+			box-sizing: border-box;
+			padding-bottom: 20px;
+			padding-top: 20px;
+			background-position-y: center;
 		}
 		.l_menu header a.ctg_item_active {
-		    width: 242px;
+		    width: auto;
 		    color: #af3b8d;
-		    padding-top: 10px;
+		    /*padding-top: 10px;
 		    margin-left: 9px;
 		    min-height: 38px;
 		    border: 1px solid #942676;
-		    background: #ffffff url(../img/l_menu_active.gif) repeat-x;
+		    background: #ffffff url(../img/l_menu_active.gif) repeat-x;*/
 		    display: block;
 		}
 		.l_menu > ul > li> a:hover,
 		.l_menu .active>a {
-			width: 246px;
-			color: #555555;
+			width: 100%;
+			color: #af3b8d;
 			padding-top: 0;
 			padding-left: 0;
 			padding: 8px 0 0;
@@ -3290,7 +3315,7 @@
 		    border-top: 7px solid #942676;
 		}
 		.mnu_catagory_btn_active {
-		    width: 242px !important;
+		    width: 294px !important;
 		    color: #af3b8d !important;
 		    padding-top: 10px !important;
 		    padding-left: 9px !important;
@@ -3299,14 +3324,16 @@
 		    /* border-right: none; */
 		    background: #f5f5f5 url(../img/l_menu_active.gif) repeat-x !important;
 		}
-		.l_menu .level_two ul {
-		    width: 93%;
-    	}
 		.l_menu .level_two a {
 		    width: 100%;
 		    display: block;
 		}
-		
+		.l_menu header a:hover {
+		    color: #af3b8d;
+		}
+		.top_mnu {
+			padding-top: 40px;
+		}
 
 
 
@@ -3320,7 +3347,6 @@
 
 
 
-	
 		.l_menu > ul > li:hover .level_two,
 		.hide_level_two,
 		.hide_menu,
@@ -3328,6 +3354,9 @@
 		.hide_menu_sub {
 			display: none;
 		}
+		/*.l_menu > ul > li:hover .level_two {
+		    display: none !important;
+		}*/
 		.main_menu,
 		.menu_show {
 			display: block !important;
@@ -3460,6 +3489,8 @@
 		.comments h2 {
 			width: 175px;
 			font-size: 17px;
+			padding-left: 70px;
+			background: url(../img/comments_bg.png) 10px 2px no-repeat;
 		}
 		.comments .add_comment {
 			margin: 13px 5% 0 0;
@@ -3668,9 +3699,17 @@
 		}
 		.mobile_mnu {
 		    left: 0;
+		    top: 209px;
 		}
 		.top_mnu {
 		    padding-left: 0;
 		    margin-left: 0;
+			padding-top: 80px;
+		}
+		.comments .add_comment {
+		    margin: -35px 5% 15px 0;
+		}
+		.comments h2 {
+		    width: 200px;
 		}
 	}
