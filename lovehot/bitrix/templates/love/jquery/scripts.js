@@ -92,8 +92,17 @@ $(document).ready(function(){
 		  var menu = document.querySelector(".mobile_menu_container");
 		  var overlay = document.querySelector(".modal_overlay");
 		  var m_mnu = document.querySelector(".mobile_mnu");
+		  var h = 225;
 
 		  // var link = document.querySelectorAll(".link");
+		// $(window).scroll(function() {
+		//   if ($(this).scrollTop() > h) {
+  //          $('.mobile_mnu').addClass('fixed');
+  //      		} else {
+	 //           $('.mobile_mnu').removeClass('fixed');
+	 //       }
+	 //     });
+
 		  if ($(".toggle_mnu").length > 0) {
 			toggle_mnu.addEventListener("click", function(event) {
 			  event.preventDefault(); //отмена стандартного дейстивия
@@ -123,6 +132,13 @@ $(document).ready(function(){
 			$(this).toggleClass("mnu_catagory_btn_active");
 			$(this).parent("li").find(".level_two").toggleClass("menu_show");
 		  });
+
+		  $('.modal_overlay').on('click', function() {
+		  	$(this).toggleClass("menu_show");
+		  	m_mnu.classList.toggle("m_menu_show");
+			  menu.classList.toggle("menu_show"); //добавляем класс
+			  toggle_mnu.classList.toggle("on");
+		  })
 		})	
 
 	/*----------------------------------------------------------------*/

@@ -2059,9 +2059,9 @@
 	    width: 374px;
 	    position: relative;
 	}
-	.product_block .descr {
+	/*.product_block .descr {
 	    margin: 0 0 0 401px;
-	}
+	}*/
 	.product_block .articul {
 	    color: #797979;
 	    font-size: 16px;
@@ -2217,7 +2217,7 @@
 	.methods_block {
 	    float: left;
 	    width: 402px;
-	    padding: 0 0 30px 18px;
+	    /*padding: 0 0 30px 18px;*/
 	}
 	.methods_block.first {
 	    padding-left: 0;
@@ -2829,18 +2829,34 @@
 	    left: 0;
 	    z-index: 10;
 	    display: none;
-	    margin-top: 210px;
+	    /*margin-top: 210px;*/
 	    width: 100%;
 	    height: 100%;
-	    background-color: rgba(175, 59, 141, 0.8);
-	    opacity: 0.902;
+	    background-color: rgba(175, 59, 141, 0.7);
+	    /*opacity: 0.902;*/
+	}
+	.product_content {
+	    display: flex;
+	    justify-content: space-between;
+	}
+	.product_block .descr {
+	    width: 420px;
+		margin-left: 20px;
+	}
+	.methods_block {
+	    padding: 0 0 30px 15px;
+	}
+	.content {
+		box-sizing: border-box;
 	}
 	@media screen and (max-width: 1100px) {
 		.container {
 			max-width: 73.9623%;
+			max-width: 77.1623%;
 		}
 		.content {
 			box-sizing: border-box;
+			padding-right: 20px;
 		}
 	    .c_carousele {
 	        max-width: 628px !important;
@@ -2926,6 +2942,14 @@
 		}
 		nav ul {
 			padding-left: 0;
+		}
+		.product_page.product_list.popular .c_carousele {
+			margin: 0 auto;
+		}
+		.methods_block {
+		    padding: 0 0 30px 0px;
+		    float: none;
+			margin: 0 auto;
 		}
 	}
 	@media screen and (max-width: 1000px) {
@@ -3044,7 +3068,11 @@
 	}
 	@media screen and (max-width: 840px) {
 		.container {
+			width: 99%;
     		max-width: none;
+		}
+		header[role="banner"] {
+		    min-height: 280px;
 		}
 		.brands_block {
     		width: 500px;
@@ -3062,7 +3090,7 @@
 			float: none;
 			width: 540px;
 			margin: 0 auto;
-	}
+		}
 	    .f_contacts,
 	    .f_contacts_link,
 	    .f_social_btn,
@@ -3070,7 +3098,7 @@
 	        margin-top: 135px;
 	    }
 	    .footer_wrap {
-	        min-height: 383px;
+	        min-height: 340px;
 	    }
 	    .f_logo {
 	        width: 260px;
@@ -3105,7 +3133,7 @@
 			display: none;
 		}
 		a.toggle_mnu.on {
-		z-index: 4;
+		z-index: 100;
 		}
 		.h_card,
 		.search_form {
@@ -3113,6 +3141,9 @@
 			}
 		.middle {
 			z-index: 1;
+		}
+		.m_menu_show {
+			top: 0;
 		}
 /**************************************************************************/
 		/*Togle Menu end*/
@@ -3175,7 +3206,7 @@
 			display: none;
 			position: absolute;
 			top: 0;
-			z-index: 3;
+			z-index: 99;
 		}
 		.navigation_mobile ul {
 			display: flex;
@@ -3203,8 +3234,10 @@
 			display: flex;
 			flex-direction: column;
 			position: relative;
-    	left: 0px;
-    	width: 235px;
+	    	left: 0px;
+			width: 235px;
+			padding: 10px 0 5px;
+			margin-bottom: 2px;
 		}
 		.l_menu > ul > li:hover,
 		.l_menu .active {
@@ -3219,10 +3252,13 @@
 		.l_menu .level_two ul {
 			padding: 0;
 			padding-left: 13px;
+		    width: 93%;
+		    background: none;
+		    height: auto !important;
 		}
 		.top_mnu {
 			transition: all 0.3s ease;
-			padding-top: 80px;
+			padding-top: 40px;
 			text-transform: uppercase;
 			background: #ececec;
 			width: 318px;
@@ -3246,25 +3282,41 @@
 		    box-sizing: border-box;
 		    margin-bottom: 15px;
 		}
+		.l_menu {
+		    margin: 0 0 10px;
+		}
+		.l_menu.hide_menu {
+			margin-bottom: 5px;
+		}
+		.l_menu header {
+			background: none;
+			border-bottom: 1px solid #ad3b8d;
+		}
+		.brands_menu:last-child header {
+			border-bottom: none;
+		}
 		.l_menu header a {
 		    display: block;
 		    width: 260px;
-		    box-sizing: border-box;
+			box-sizing: border-box;
+			padding-bottom: 20px;
+			padding-top: 20px;
+			background-position-y: center;
 		}
 		.l_menu header a.ctg_item_active {
-		    width: 242px;
+		    width: auto;
 		    color: #af3b8d;
-		    padding-top: 10px;
+		    /*padding-top: 10px;
 		    margin-left: 9px;
 		    min-height: 38px;
 		    border: 1px solid #942676;
-		    background: #ffffff url(../img/l_menu_active.gif) repeat-x;
+		    background: #ffffff url(../img/l_menu_active.gif) repeat-x;*/
 		    display: block;
 		}
 		.l_menu > ul > li> a:hover,
 		.l_menu .active>a {
-			width: 246px;
-			color: #555555;
+			width: 100%;
+			color: #af3b8d;
 			padding-top: 0;
 			padding-left: 0;
 			padding: 8px 0 0;
@@ -3290,7 +3342,7 @@
 		    border-top: 7px solid #942676;
 		}
 		.mnu_catagory_btn_active {
-		    width: 242px !important;
+		    width: 294px !important;
 		    color: #af3b8d !important;
 		    padding-top: 10px !important;
 		    padding-left: 9px !important;
@@ -3299,14 +3351,19 @@
 		    /* border-right: none; */
 		    background: #f5f5f5 url(../img/l_menu_active.gif) repeat-x !important;
 		}
-		.l_menu .level_two ul {
-		    width: 93%;
-    	}
 		.l_menu .level_two a {
 		    width: 100%;
 		    display: block;
 		}
-		
+		.l_menu header a:hover {
+		    color: #af3b8d;
+		}
+		.top_mnu {
+			padding-top: 40px;
+		}
+		.mnu_catagory_btn_active {
+	    width: 226px !important;
+	  }
 
 
 
@@ -3319,8 +3376,10 @@
 
 
 
-
-	
+		.fixed {
+			top: 0;
+			position: fixed;
+		}
 		.l_menu > ul > li:hover .level_two,
 		.hide_level_two,
 		.hide_menu,
@@ -3328,6 +3387,9 @@
 		.hide_menu_sub {
 			display: none;
 		}
+		/*.l_menu > ul > li:hover .level_two {
+		    display: none !important;
+		}*/
 		.main_menu,
 		.menu_show {
 			display: block !important;
@@ -3460,6 +3522,8 @@
 		.comments h2 {
 			width: 175px;
 			font-size: 17px;
+			padding-left: 70px;
+			background: url(../img/comments_bg.png) 10px 2px no-repeat;
 		}
 		.comments .add_comment {
 			margin: 13px 5% 0 0;
@@ -3581,7 +3645,7 @@
 	        height: 85px;
 	        top: 90px;
 	        left: calc(50% - 280px);
-	        transform: scale(0.55);
+	        transform: scale(0.53);
 	    }
 	    .h_op {
 	        width: 130px;
@@ -3672,5 +3736,30 @@
 		.top_mnu {
 		    padding-left: 0;
 		    margin-left: 0;
+				width: 260px;
 		}
+		.comments .add_comment {
+		    margin: -35px 5% 15px 0;
+		}
+		.comments h2 {
+		    width: 200px;
+		}
+		.menu_part_name {
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+		.l_menu {
+			font-size: 13px;
+		}
+		.l_menu > ul > li {
+			padding-left: 10px;
+		}
+		.l_menu .level_two {
+			left: -10px;
+			width: 245px;
+		}
+		.mnu_catagory_btn_active {
+	    margin-left: -10px;
+	    width: 236px !important;
+	  }
 	}
