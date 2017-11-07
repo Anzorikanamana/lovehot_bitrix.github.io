@@ -2834,6 +2834,7 @@
 	    height: 100%;
 	    background-color: rgba(175, 59, 141, 0.7);
 	    /*opacity: 0.902;*/
+<<<<<<< HEAD
 	}
 	.product_content {
 	    display: flex;
@@ -2848,6 +2849,8 @@
 	}
 	.content {
 		box-sizing: border-box;
+=======
+>>>>>>> 54dd29fc12184db9d7ed2be2edb9d643d993878e
 	}
 	@media screen and (max-width: 1100px) {
 		.container {
@@ -3286,7 +3289,11 @@
 		    margin: 0 0 10px;
 		}
 		.l_menu.hide_menu {
+<<<<<<< HEAD
 			margin-bottom: 5px;
+=======
+			margin-bottom: 25px;
+>>>>>>> 54dd29fc12184db9d7ed2be2edb9d643d993878e
 		}
 		.l_menu header {
 			background: none;
@@ -3361,9 +3368,13 @@
 		.top_mnu {
 			padding-top: 40px;
 		}
+<<<<<<< HEAD
 		.mnu_catagory_btn_active {
 	    width: 226px !important;
 	  }
+=======
+
+>>>>>>> 54dd29fc12184db9d7ed2be2edb9d643d993878e
 
 
 
@@ -3376,10 +3387,13 @@
 
 
 
+<<<<<<< HEAD
 		.fixed {
 			top: 0;
 			position: fixed;
 		}
+=======
+>>>>>>> 54dd29fc12184db9d7ed2be2edb9d643d993878e
 		.l_menu > ul > li:hover .level_two,
 		.hide_level_two,
 		.hide_menu,
@@ -3732,11 +3746,22 @@
 		}
 		.mobile_mnu {
 		    left: 0;
+		    top: 209px;
 		}
 		.top_mnu {
 		    padding-left: 0;
 		    margin-left: 0;
+<<<<<<< HEAD
 				width: 260px;
+=======
+			padding-top: 80px;
+		}
+		.comments .add_comment {
+		    margin: -35px 5% 15px 0;
+		}
+		.comments h2 {
+		    width: 200px;
+>>>>>>> 54dd29fc12184db9d7ed2be2edb9d643d993878e
 		}
 		.comments .add_comment {
 		    margin: -35px 5% 15px 0;
