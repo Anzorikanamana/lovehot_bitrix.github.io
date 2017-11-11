@@ -62,6 +62,8 @@
 	    margin: 0 0 18px;
 	}
 	img {
+		max-width: 100%;
+		height: auto;
 	    border: none;
 	}
 	input {
@@ -1555,6 +1557,7 @@
 	    color: #424242;
 	    width: 22px;
 	    height: 18px;
+		padding-top: 3px;
 	    text-align: center;
 	}
 	.product_pager .active a {
@@ -1565,7 +1568,8 @@
 	    height: 294px;
 	    width: 20%;
 	    margin: 0;
-	    margin-bottom: 24px;
+	    /*margin-bottom: 24px;*/
+	    margin-bottom: 24px !important;
 	}
 	.product_list.sexy_carousele.lev2 .desc {
 	    line-height: 18px;
@@ -2975,13 +2979,13 @@
 			float: none;
 			width: 49%;
 		}
-		.pika-stage {
+		/*.pika-stage {
 			width: 100% !important;
 			padding: 23.3% 0px;
 			height: auto !important;
-		}
+		}*/
 		.pika-stage img {
-		    width: 100%;
+		    width: auto;
 		    height: auto;
 		}
 		.product_block .descr {
@@ -3122,6 +3126,14 @@
 		    float: none; 
 		    margin: 0 auto;
 		}
+		.comments {
+		    float: none;
+		    margin: 0 auto;
+		}
+		.product_list.sexy_carousele.lev2 {
+		    width: 680px !important;
+		    margin: 0 auto;
+		}
 	}
 	@media screen and (max-width: 1000px) {
 	    .sign_in_block {
@@ -3243,6 +3255,22 @@
 		.card_list .price {
 		    background: url(../img/card_price.png) no-repeat 12px center;
 		}
+		.pika-stage img {
+		    width: 98%;
+		}
+		.pika-stage {
+		    height: 445px !important;
+		}
+		.discount_block {
+		    left: 125px;
+				margin: 13px 95px 0 0;
+		}
+		.product_list.sexy_carousele.lev2 {
+		    width: 520px !important;
+		}
+		.product_pager {
+			width: 285px;
+		}
 	}
 	@media screen and (max-width: 886px) {
 	    .search_form {
@@ -3292,10 +3320,13 @@
 		.container {
 		    max-width: 71.2623%;
 		}
+		.product_categories {
+		    width: 400px;
+		}
 	}
 	@media screen and (max-width: 840px) {
 		.container {
-			width: 100%;
+			width: 99%;
     		max-width: none;
 		}
 		header[role="banner"] {
@@ -3325,7 +3356,7 @@
 	        margin-top: 135px;
 	    }
 	    .footer_wrap {
-	        min-height: 340px;
+	        min-height: 370px;
 	    }
 	    .f_logo {
 	        width: 260px;
@@ -3377,7 +3408,7 @@
 		/*Togle Menu end*/
 		.m_menu_show .toggle_mnu {
 		    position: absolute;
-		    left: 260px;
+		    left: 325px;
 		}
 		.m_menu_show .toggle_mnu span:before,
 		.m_menu_show .toggle_mnu span:after {
@@ -3663,16 +3694,26 @@
 		.info_list li:last-child .col_2 {
 		    padding-left: 36px;
 		}
-	}
-	@media screen and (max-width: 720px) {
-		.product_block .price {
-		    font-size: 25px;
+		.pika-stage img {
+			width: 90%;
 		}
-		.product_block .old_price .discount {
-		    font-size: 22px;
+		.pika-stage {
+			height: 542px !important;
 		}
-		.product_block .old_price p {
-		    font-size: 12px;
+		.discount_block {
+			left: 160px;
+		    margin: 13px 160px 0 0;
+		}
+		.product_list.sexy_carousele.lev2 {
+		    width: 680px !important;
+		}
+		.product_pager {
+			width: 245px;
+		}
+		.product_categories {
+		    width: 620px;
+			float: none;
+			margin: 0 auto;
 		}
 	}
 	@media screen and (max-width: 720px) {
@@ -3708,6 +3749,18 @@
 		.product_block .phone .numb {
 		    background-size: 22px;
 		    padding: 0 0 0 25px;
+		}
+		/*.product_block .price {
+		    font-size: 25px;
+		}
+		.product_block .old_price .discount {
+		    font-size: 22px;
+		}*/
+		.product_block .old_price p {
+		    font-size: 12px;
+		}
+		.product_list.sexy_carousele.lev2 {
+		    width: 515px !important;
 		}
 	}
 	@media screen and (max-width: 668px) {
@@ -3851,6 +3904,9 @@
 		.card_list .pic {
 			height: 103px;
 		}
+		.product_categories {
+			width: 410px;
+		}
 	}	
 	@media screen and (max-width: 625px) {
 	    .f_social_btn p {
@@ -3889,7 +3945,7 @@
 			background: url(../img/comments_bg.png) 10px 2px no-repeat;
 		}
 		.comments .add_comment {
-			margin: 13px 5% 0 0;
+			margin: 13px 5% 0 10px;
 		}
 		.brands_block {
 		    width: 400px;
@@ -3899,6 +3955,34 @@
 		}
 		.sexy_carousele {
 		    width: 328px !important;
+		}
+		.form_left {
+			margin-top: -50px !important;
+			float: right;
+			width: 200px;
+		}
+		.btn_order_refresh_card {
+		    margin-top: -30px;
+		    margin-left: 35px;
+		}
+		.discount_block {
+		    margin: 95px 0px 0 0;
+		}
+		.sum_block {
+		    padding: 33px 0 0 0px;
+		}
+		.product_list.sexy_carousele.lev2 {
+			width: 355px !important;
+		}
+		.product_pager {
+			margin-left: 27%;
+			margin-right: 27%;
+			margin-bottom: 20px;
+			width: 220px;
+		}
+		.sorting {
+			width: 270px;
+			margin: 0 auto;
 		}
 	}
 	@media screen and (max-width: 480px) {
@@ -4107,10 +4191,16 @@
 			width: 260px;
 		}
 		.comments .add_comment {
-		    margin: -35px 5% 15px 0;
+		    /*margin: 10px 5% 15px 0;*/
+			margin-left: calc(50% - 80px);
+			margin-right: 60px;
+			float: left;
 		}
 		.comments h2 {
-		    width: 200px;
+		    width: 175px;
+			margin-bottom: 10px;
+			margin-left: calc(50% - 124.5px);
+			margin-right: 20px;
 		}
 		.menu_part_name {
 			font-size: 14px;
@@ -4145,7 +4235,7 @@
 		    font-size: 12px;
 		}
 		.numb img {
-		    width: 180px;
+		    width: 160px;
 		}
 		.product_block .phone .numb {
 		    background-size: 22px;
@@ -4203,5 +4293,57 @@
 			display: table-cell;
 			vertical-align: middle;
 			height: 100px;
+		}
+		.m_menu_show .toggle_mnu {
+		    left: 260px;
+		}
+		.form_left {
+			margin-left: calc(50% - 95px) !important;
+			float: none;	
+		}
+		.form_left {
+			margin-top: 0px !important;
+		}
+		.product_block .phone {
+		    width: 194px;
+		}
+		.pika-stage {
+			height: 325px !important;
+		    min-height: 242px;
+			padding: 10px;
+		}
+		h2.category_title {
+		    font-size: 21px;
+		    text-align: center;
+		}
+		.sum_block {
+			float: left;
+			margin-left: calc(50% - 100px);
+		}
+		.sum_block .sum_l {
+		    text-align: center;
+		}
+		.discount_block {
+			left: 0%;
+		    margin-left: calc(50% - 100px);
+		}
+		.btn_order_refresh_card {
+			margin-left: calc(50% + 75px);
+		}
+		.card_list {
+			padding-right: 10px;
+			padding-left: 10px;
+			padding-bottom: 5px;
+		}
+		.product_list.sexy_carousele.lev2 {
+		    width: 190px !important;
+		}
+		.product_pager {
+			float: none;
+		    margin: 0 auto;
+		    margin-bottom: 20px;
+		}
+		.product_categories {
+			width: 205px;
 		}
 	}	
