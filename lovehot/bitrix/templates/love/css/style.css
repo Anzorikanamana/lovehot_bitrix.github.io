@@ -234,6 +234,7 @@
 	    height: 248px;
 	    text-indent: -9999px;
 	    background: url(../img/logo.png) no-repeat;
+	    margin: 0;
 	}
 	h1.logo:hover {
 	    background-position: left -248px;
@@ -290,6 +291,9 @@
 	    
 	    left: 39%;
 	    z-index: 2;
+	}
+	.h_contacts h1 {
+	    margin: 0;
 	}
 	.h_contacts .phone {
 	    font-family: 'CenturyGothic-Bold';
@@ -424,8 +428,9 @@
 	    padding: 0 0 0 113px;
 	    right: 0;
 	    background: url(../img/discount.png) no-repeat;
-	    z-index: 3;
+	    z-index: 4;
 	    font-size: 15px;
+	    box-sizing: unset;
 	}
 	.sign_in_block li {
 	    float: left;
@@ -638,7 +643,7 @@
 	    position: absolute;
 	    width: 225px;
 	    height: 168px;
-	    left: 56px;
+	    left: -20px;
 	    top: -3px;
 	    border: #942676 solid 2px;
 	    background: #ffffff;
@@ -2975,6 +2980,9 @@
 		marquee {
 			margin: 0;
 		}
+		marquee img {
+			max-width: none;
+		}
 		.product_block .photo {
 			float: none;
 			width: 49%;
@@ -3534,6 +3542,7 @@
     		margin-left: -20px;
 			border: 2px solid #af3b8d;
 			border-left: none;
+			box-sizing: unset;
 		}
 		a.menu_part_name {
 			margin-left: 0;
@@ -3984,6 +3993,28 @@
 			width: 270px;
 			margin: 0 auto;
 		}
+		.news_list li {
+	    display: flex;
+	    flex-direction: column;
+	  }
+	  .news_list li section br {
+			display: none;
+		}
+		.news_list .photo{
+			margin: 0 auto;
+		}
+		.news_list .more {
+			text-align: center;
+		}
+
+		.news_article figure {
+			width: 235px;
+  		margin: 0 auto;
+		}
+		section.news_article {
+		    display: flex;
+		    flex-direction: column;
+		}
 	}
 	@media screen and (max-width: 480px) {
 		.container {
@@ -4085,8 +4116,8 @@
 	    }
 	    .sign_in_block {
 	        top: 20px;
-			right: 0;
-			width: 168px;
+					right: 0;
+					width: 168px;
 	        padding: 0 0 0 50px;
 	        background: url(../img/discount.png) 5% 80% no-repeat;
 	    }
@@ -4140,7 +4171,7 @@
 	        top: 200px;
 	        padding-top: 20px;
 	        left: calc(50% - 158px);
-			z-index: 3;
+					z-index: 3;
 	        width: 265px;
 	        /*left: 10%;*/
 	        /*right: 5px;*/
@@ -4328,7 +4359,8 @@
 		    margin-left: calc(50% - 100px);
 		}
 		.btn_order_refresh_card {
-			margin-left: calc(50% + 75px);
+			margin-left: 30%;
+			position: absolute;
 		}
 		.card_list {
 			padding-right: 10px;
