@@ -493,6 +493,7 @@
 	    flex-wrap: wrap;
 	    padding-left: 20px;
 	    position: relative;
+	    margin: 0;
 	}
 	nav ul li {
 	    padding-left: 2px;
@@ -643,7 +644,7 @@
 	    position: absolute;
 	    width: 225px;
 	    height: 168px;
-	    left: -20px;
+	    left: 56px;
 	    top: -3px;
 	    border: #942676 solid 2px;
 	    background: #ffffff;
@@ -889,7 +890,7 @@
 	    left: -11px;
 	}
 	.carousele_box .btn.next {
-	    right: 2px;
+	    right: -6px;
 	    background-position: -36px 0;
 	}
 	.carousele_box .btn.next:hover {
@@ -1404,7 +1405,7 @@
 	}
 	.product_categories {
 	    float: left;
-	    width: 100%;
+	    width: 101%;
 	}
 	.product_categories li {
 	    position: relative;
@@ -3142,6 +3143,32 @@
 		    width: 680px !important;
 		    margin: 0 auto;
 		}
+		.product_categories {
+		    float: none;
+		    width: 620px;
+		    margin: 0 auto;
+		  	display: table;
+		}
+		.registration_form {
+	    display: flex;
+	    flex-direction: column;
+			background-position: 25px bottom;
+	    background-size: 400px;
+	  }
+	  .form_line, .form_left, .form_right {
+	    margin: 0 auto;
+	    margin-right: auto !important;
+	  }
+	  .form_line label.sex {
+			width: 80px;
+		}
+		.user_form label {
+			width: 136px;
+		}
+		.registration_form input[type="submit"] {
+			margin: 0 auto;
+		}
+
 	}
 	@media screen and (max-width: 1000px) {
 	    .sign_in_block {
@@ -3206,12 +3233,17 @@
 		}
 		h2.category_title {
 			font-size: 30px;
+			text-align: center;
 		}
 		.product_block .phone {
 			width: 221px;
 		}
 		.numb img {
 		    width: 190px;
+		}
+		.registration_form {
+			background-position: -7px 97%;
+			background-size: 350px;
 		}
 	}
 	@media screen and (max-width: 950px) {
@@ -3329,7 +3361,8 @@
 		    max-width: 71.2623%;
 		}
 		.product_categories {
-		    width: 400px;
+		    width: 415px;
+
 		}
 	}
 	@media screen and (max-width: 840px) {
@@ -3724,6 +3757,10 @@
 			float: none;
 			margin: 0 auto;
 		}
+		.registration_form {
+			background-position: 13% 97%;
+	    background-size: 350px;
+	  }
 	}
 	@media screen and (max-width: 720px) {
 	    .search_form {
@@ -3770,6 +3807,10 @@
 		}
 		.product_list.sexy_carousele.lev2 {
 		    width: 515px !important;
+		}
+		.registration_form {
+				background-position: 5% 95%;
+				background-size: 260px;
 		}
 	}
 	@media screen and (max-width: 668px) {
@@ -3916,6 +3957,9 @@
 		.product_categories {
 			width: 410px;
 		}
+		.sign_in_popup {
+	    left: 10px;
+	  }
 	}	
 	@media screen and (max-width: 625px) {
 	    .f_social_btn p {
@@ -4014,6 +4058,14 @@
 		section.news_article {
 		    display: flex;
 		    flex-direction: column;
+		}
+		.user_form .form_left {
+	    width: auto;
+	    margin-top: 0 !important;
+	  }
+	  form.user_form.registration_form {
+			background-position: 0% 95%;
+		 	background-size: 240px;
 		}
 	}
 	@media screen and (max-width: 480px) {
@@ -4378,4 +4430,51 @@
 		.product_categories {
 			width: 205px;
 		}
-	}	
+		.form_line label {
+	    min-width: 70px;
+	    width: 70px;
+		}
+		.user_form .form_left {
+	    margin-left: auto !important;
+	  }
+	  .form_left .form_line,
+	  .form_right .form_line {
+	    display: flex;
+	    flex-direction: column;
+	  }
+	  .user_form .form_right label {
+	    width: 253px;
+		}
+		.user_form .form_line {
+	    margin-bottom: 5px;
+		}
+		.user_form .form_line.required {
+	    background: url(../img/required_star.png) right 75% no-repeat;
+	  }
+	  .captcha label br {
+	    display: none;
+		}
+		.captcha label {
+	    width: 210px !important;
+	    margin: 0 auto;
+		}
+		.registration_form .form_line.captcha input {
+	    margin-left: 25%;
+	    margin-right: auto;
+	  }
+	  .registration_form .form_line.captcha img {
+	  	margin-left: 20%;
+	  }
+		form.user_form.registration_form {
+	    background-position: calc(50% - -60px) 106%;
+	    background-size: 352px;
+	    padding-bottom: 142px;
+		}
+		.sign_in_form label {
+	    width: 59px;
+			min-width: auto;
+		}
+		.sign_in_popup {
+	    left: -20px;
+	  }
+}	

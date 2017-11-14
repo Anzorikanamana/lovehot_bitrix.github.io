@@ -143,7 +143,7 @@ $(document).ready(function(){
 
 	/*----------------------------------------------------------------*/
 	
-	if($('*').is('#carousel_1')){
+	/*if($('*').is('#carousel_1')){
 		$('#carousel_1 .c_carousele').jCarouselLite({
 			btnNext: '#carousel_1 .next',
 			btnPrev: '#carousel_1 .prev',
@@ -151,8 +151,8 @@ $(document).ready(function(){
 			speed: 1000,
 			circular: false
 		});
-	}	
-	if($('*').is('#carousel_2')){
+	}*/
+	/*if($('*').is('#carousel_2')){
 		$('#carousel_2 .c_carousele').jCarouselLite({
 			btnNext: '#carousel_2 .next',
 			btnPrev: '#carousel_2 .prev',
@@ -160,17 +160,215 @@ $(document).ready(function(){
 			speed: 1000,
 			circular: false
 		});
-	}	
-	if($('*').is('#carousel_3')){
-		$('#carousel_3 .c_carousele').jCarouselLite({
-			btnNext: '#carousel_3 .next',
-			btnPrev: '#carousel_3 .prev',
-			visible:4,
-			speed: 1000,
-			circular: false
-		});
+	}*/
+
+/* carousel_1  */
+
+	if(document.documentElement.clientWidth > 1100) {
+		if($('*').is('#carousel_1')){
+			$('#carousel_1 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_1 .next',
+				btnPrev: '#carousel_1 .prev',
+				visible:4,
+				speed: 1000,
+				circular: false
+			});
+		}
 	}
-	
+	if(((document.documentElement.clientWidth < 1100) && (document.documentElement.clientWidth > 934))
+		|| ((document.documentElement.clientWidth < 824) && (document.documentElement.clientWidth > 651))){
+		if($('*').is('#carousel_1')){
+			$('#carousel_1 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_1 .next',
+				btnPrev: '#carousel_1 .prev',
+				visible:3,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(((document.documentElement.clientWidth < 934) && (document.documentElement.clientWidth > 824))
+	|| ((document.documentElement.clientWidth < 651) && (document.documentElement.clientWidth > 461))){
+		if($('*').is('#carousel_1')){
+			$('#carousel_1 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_1 .next',
+				btnPrev: '#carousel_1 .prev',
+				visible:2,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(document.documentElement.clientWidth < 461){/*480px*/
+		if($('*').is('#carousel_1')){
+			$('#carousel_1 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_1 .next',
+				btnPrev: '#carousel_1 .prev',
+				visible:1,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+
+/* carousel_2  */
+
+	if(document.documentElement.clientWidth > 1100) {
+		if($('*').is('#carousel_2')){
+			$('#carousel_2 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_2 .next',
+				btnPrev: '#carousel_2 .prev',
+				visible:4,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(((document.documentElement.clientWidth < 1100) && (document.documentElement.clientWidth > 934))
+		|| ((document.documentElement.clientWidth < 824) && (document.documentElement.clientWidth > 651))){
+		if($('*').is('#carousel_2')){
+			$('#carousel_2 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_2 .next',
+				btnPrev: '#carousel_2 .prev',
+				visible:3,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(((document.documentElement.clientWidth < 934) && (document.documentElement.clientWidth > 824))
+	|| ((document.documentElement.clientWidth < 651) && (document.documentElement.clientWidth > 461))){
+		if($('*').is('#carousel_2')){
+			$('#carousel_2 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_2 .next',
+				btnPrev: '#carousel_2 .prev',
+				visible:2,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(document.documentElement.clientWidth < 461){/*480px*/
+		if($('*').is('#carousel_2')){
+			$('#carousel_2 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_2 .next',
+				btnPrev: '#carousel_2 .prev',
+				visible:1,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+
+/* carousel_3  */
+
+	if(document.documentElement.clientWidth > 1100) {
+		if($('*').is('#carousel_3')){
+			$('#carousel_3 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_3 .next',
+				btnPrev: '#carousel_3 .prev',
+				visible:4,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(((document.documentElement.clientWidth < 1100) && (document.documentElement.clientWidth > 934))
+		|| ((document.documentElement.clientWidth < 824) && (document.documentElement.clientWidth > 651))){
+		if($('*').is('#carousel_3')){
+			$('#carousel_3 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_3 .next',
+				btnPrev: '#carousel_3 .prev',
+				visible:3,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(((document.documentElement.clientWidth < 934) && (document.documentElement.clientWidth > 824))
+	|| ((document.documentElement.clientWidth < 651) && (document.documentElement.clientWidth > 461))){
+		if($('*').is('#carousel_3')){
+			$('#carousel_3 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_3 .next',
+				btnPrev: '#carousel_3 .prev',
+				visible:2,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(document.documentElement.clientWidth < 461){/*480px*/
+		if($('*').is('#carousel_3')){
+			$('#carousel_3 .c_carousele').jCarouselLite({
+				btnNext: '#carousel_3 .next',
+				btnPrev: '#carousel_3 .prev',
+				visible:1,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+
+/* carousel_4 */
+
+	if(document.documentElement.clientWidth > 1100) {
+		if($('*').is('#carousel_4')){
+			$('#carousel_4 .sexy_carousele').jCarouselLite({
+				btnNext: '#carousel_4 .next',
+				btnPrev: '#carousel_4 .prev',
+				visible:5,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(((document.documentElement.clientWidth < 1100) && (document.documentElement.clientWidth > 934))
+		|| ((document.documentElement.clientWidth < 824) && (document.documentElement.clientWidth > 702))){
+		if($('*').is('#carousel_4')){
+			$('#carousel_4 .sexy_carousele').jCarouselLite({
+				btnNext: '#carousel_4 .next',
+				btnPrev: '#carousel_4 .prev',
+				visible:4,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(((document.documentElement.clientWidth < 934) && (document.documentElement.clientWidth > 824))
+	|| ((document.documentElement.clientWidth < 702) && (document.documentElement.clientWidth > 551))){
+		if($('*').is('#carousel_4')){
+			$('#carousel_4 .sexy_carousele').jCarouselLite({
+				btnNext: '#carousel_4 .next',
+				btnPrev: '#carousel_4 .prev',
+				visible:3,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if((document.documentElement.clientWidth < 551) && (document.documentElement.clientWidth > 461)){
+		if($('*').is('#carousel_4')){
+			$('#carousel_4 .sexy_carousele').jCarouselLite({
+				btnNext: '#carousel_4 .next',
+				btnPrev: '#carousel_4 .prev',
+				visible:2,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+	if(document.documentElement.clientWidth < 461){
+		if($('*').is('#carousel_4')){
+			$('#carousel_4 .sexy_carousele').jCarouselLite({
+				btnNext: '#carousel_4 .next',
+				btnPrev: '#carousel_4 .prev',
+				visible:1,
+				speed: 1000,
+				circular: false
+			});
+		}
+	}
+/*
 	if($('*').is('#carousel_4')){
 		$('#carousel_4 .sexy_carousele').jCarouselLite({
 			btnNext: '#carousel_4 .next',
@@ -179,9 +377,9 @@ $(document).ready(function(){
 			speed: 1000,
 			circular: false
 		});
-	}
+	}*/
 	$('.product_list .prev').addClass('disabled');
-	
+
 	/*----------------------------------------------------------------*/
 	
 	$('.c_carousele img').each(function(i,e){
