@@ -428,7 +428,7 @@ h1.logo a {
 	padding: 0 0 0 113px;
 	right: 0;
 	background: url(../img/discount.png) no-repeat;
-	z-index: 4;
+	z-index: 3;
 	font-size: 15px;
 	-webkit-box-sizing: unset;
 	box-sizing: unset;
@@ -735,7 +735,9 @@ nav ul .active a {
 .callback_form label {
 	float: left;
 	text-align: right;
-	width: 62px;
+	/*width: 62px;*/
+	width: 62px !important;
+	min-width: auto !important;
 	padding: 0 13px 0 0;
 	color: #010101;
 	font-size: 12px;
