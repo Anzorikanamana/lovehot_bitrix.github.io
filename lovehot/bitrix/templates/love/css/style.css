@@ -3292,6 +3292,10 @@ marquee {
 			background-position: -7px 97%;
 			background-size: 350px;
 		}
+		.sum_block.price {
+			float: right;
+			margin-right: 40px;
+		}
 	}
 	@media screen and (max-width: 950px) {
 		.c_carousele {
@@ -3367,6 +3371,9 @@ marquee {
 		.product_pager {
 			width: 285px;
 		}
+		.sum_block.price {
+			margin-right: 30px;
+		}
 	}
 	@media screen and (max-width: 886px) {
 		.search_form {
@@ -3425,6 +3432,9 @@ marquee {
 		.product_categories {
 			width: 415px;
 
+		}
+		.sum_block.price {
+			margin-right: 20px;
 		}
 	}
 	@media screen and (max-width: 840px) {
@@ -3875,6 +3885,9 @@ marquee {
 			background-position: 13% 97%;
 			background-size: 350px;
 		}
+		.sum_block.price {
+			margin-right: 35px;
+		}
 	}
 	@media screen and (max-width: 720px) {
 		.search_form {
@@ -3925,6 +3938,9 @@ marquee {
 		.registration_form {
 			background-position: 5% 95%;
 			background-size: 260px;
+		}
+		.sum_block.price {
+			margin-right: 25px;
 		}
 	}
 	@media screen and (max-width: 668px) {
@@ -4106,6 +4122,9 @@ marquee {
 		.f_text {
 			margin-top: 114px;
 		}
+		.sum_block.price {
+			margin-right: 10px;
+		}
 	}
 	@media screen and (max-width: 570px) {
 		.comments {
@@ -4205,8 +4224,14 @@ marquee {
 			background-position: 0% 95%;
 			background-size: 240px;
 		}
+		.sum_block.price {
+		    margin-right: 40px;
+		}
 	}
 	@media screen and (max-width: 480px) {
+		body {
+			overflow-x: hidden;
+		}
 		.container {
 			width: 98%;
 		}
@@ -4233,6 +4258,7 @@ marquee {
 		}
 		.news_block .news_bg {
 			width: 90%;
+			margin: 0 auto;
 		}
 		.sexy_carousele {
 			width: 164px !important;
@@ -4652,5 +4678,16 @@ marquee {
 		}
 		.head_sub_mnu:last-child .head_menu{
 			max-height: calc(100vh - 116px);
+		}
+		.order_window .additional_info,
+		.order_window .user_info {
+			width: 100%;
+			margin-left: -10px;
+		}
+		.sum_block.price {
+		    margin: 0 auto;
+		    float: none;
+		    width: 200px;
+		    text-align: center;
 		}
 	}	
