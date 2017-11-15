@@ -3230,6 +3230,7 @@ marquee {
 		}
 		.h_ships_free {
 			left: calc(50% - 302.5px);
+			height: 95px;
 		}
 		.news_block .news_bg {
 			display: -webkit-box;
@@ -3689,6 +3690,7 @@ marquee {
 			margin-left: 0;
 			color: #942676;
 			text-decoration: none;
+			width: 308px;
 		}
 		.menu_part_name {
 			display: block;
