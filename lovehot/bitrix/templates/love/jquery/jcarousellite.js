@@ -214,7 +214,7 @@ $.fn.jCarouselLite = function(o) {
 
         vertical: false,
         circular: true,
-        visible: 2,
+        visible: 3,
         start: 0,
         scroll: 1,
 
@@ -280,7 +280,7 @@ $.fn.jCarouselLite = function(o) {
             return li.slice(curr).slice(0,v);
         };
 
-/**/    function go(to) {
+        function go(to) {
             if(!running) {
 
                 if(o.beforeStart)
@@ -324,7 +324,7 @@ $.fn.jCarouselLite = function(o) {
 
             }
             return false;
-/**/       };
+        };
     });
 };
 

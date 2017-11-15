@@ -87,7 +87,7 @@ $(document).ready(function(){
 	// });
 
 		$(document).ready(function() {
-
+			
 		  var toggle_mnu = document.querySelector(".toggle_mnu");
 		  var menu = document.querySelector(".mobile_menu_container");
 		  var overlay = document.querySelector(".modal_overlay");
@@ -138,7 +138,12 @@ $(document).ready(function(){
 		  	m_mnu.classList.toggle("m_menu_show");
 			  menu.classList.toggle("menu_show"); //добавляем класс
 			  toggle_mnu.classList.toggle("on");
-		  })
+		  });
+		  $(".menu_part_name_head").click(function(event) {
+			event.preventDefault();
+			$(".head_menu").removeClass("menu_show");
+			$(this).parents(".sub_mnu").find(".head_menu").toggleClass("menu_show");
+		  });
 		})	
 
 	/*----------------------------------------------------------------*/

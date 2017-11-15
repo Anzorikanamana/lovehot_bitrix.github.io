@@ -4,30 +4,30 @@ IncludeTemplateLangFile(__FILE__);
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=LANGUAGE_ID?>" lang="<?=LANGUAGE_ID?>">
 <head>
-<? 
-$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone"); 
-$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android"); 
-$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],"webOS"); 
-$berry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry"); 
-$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod"); 
-$mobile = strpos($_SERVER['HTTP_USER_AGENT'],"Mobile"); 
-$symb = strpos($_SERVER['HTTP_USER_AGENT'],"Symbian"); 
-$operam = strpos($_SERVER['HTTP_USER_AGENT'],"Opera M"); 
-$htc = strpos($_SERVER['HTTP_USER_AGENT'],"HTC_"); 
-$fennec = strpos($_SERVER['HTTP_USER_AGENT'],"Fennec/"); 
-$winphone = strpos($_SERVER['HTTP_USER_AGENT'],"WindowsPhone"); 
-$wp7 = strpos($_SERVER['HTTP_USER_AGENT'],"WP7"); 
-$wp8 = strpos($_SERVER['HTTP_USER_AGENT'],"WP8"); 
+<?
+$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],"webOS");
+$berry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
+$mobile = strpos($_SERVER['HTTP_USER_AGENT'],"Mobile");
+$symb = strpos($_SERVER['HTTP_USER_AGENT'],"Symbian");
+$operam = strpos($_SERVER['HTTP_USER_AGENT'],"Opera M");
+$htc = strpos($_SERVER['HTTP_USER_AGENT'],"HTC_");
+$fennec = strpos($_SERVER['HTTP_USER_AGENT'],"Fennec/");
+$winphone = strpos($_SERVER['HTTP_USER_AGENT'],"WindowsPhone");
+$wp7 = strpos($_SERVER['HTTP_USER_AGENT'],"WP7");
+$wp8 = strpos($_SERVER['HTTP_USER_AGENT'],"WP8");
 
 
-$VISITOR_ID = $APPLICATION->get_cookie("MOBILE_VISITOR_MB"); 
-if (($ipad || $iphone || $android || $palmpre || $ipod || $berry || $mobile || $symb || $operam || $htc || $fennec || $winphone || $wp7 || $wp8) && 
-($_SERVER["SERVER_NAME"] == "lovehot.ru" || $_SERVER["SERVER_NAME"] == "www.lovehot.ru") && 
-empty($VISITOR_ID)) { 
-$APPLICATION->set_cookie("MOBILE_VISITOR_MB", "MOBILE", time()+60*60); 
-LocalRedirect("http://lovehot.ru/?type=pda"); 
-exit(); 
-} 
+$VISITOR_ID = $APPLICATION->get_cookie("MOBILE_VISITOR_MB");
+if (($ipad || $iphone || $android || $palmpre || $ipod || $berry || $mobile || $symb || $operam || $htc || $fennec || $winphone || $wp7 || $wp8) &&
+($_SERVER["SERVER_NAME"] == "lovehot.ru" || $_SERVER["SERVER_NAME"] == "www.lovehot.ru") &&
+empty($VISITOR_ID)) {
+$APPLICATION->set_cookie("MOBILE_VISITOR_MB", "MOBILE", time()+60*60);
+LocalRedirect("http://lovehot.ru/?type=pda");
+exit();
+}
 ?>
 <title><?$APPLICATION->ShowTitle()?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -86,7 +86,7 @@ exit();
 			)
 		);
 		?>
-		
+
 		<?
 		$APPLICATION->IncludeComponent("bitrix:main.include", "", array(
 			"AREA_FILE_SHOW" => "file",
@@ -98,7 +98,7 @@ exit();
 			)
 		);
 		?>
-		
+
 		<?
 		$APPLICATION->IncludeComponent("bitrix:main.include", "", array(
 			"AREA_FILE_SHOW" => "file",
@@ -115,9 +115,9 @@ exit();
 			<a class="toggle_mnu" href="#"><span></span></a>
 			<div class="mobile_menu_container">
 				<ul class="top_mnu">
-					<li class="sub_mnu">
-						<a href="#" class="menu_part_name">Главное меню</a>
-						<section class="l_menu hide_menu main_menu">
+					<li class="sub_mnu head_sub_mnu">
+						<a href="#" class="menu_part_name menu_part_name_head">Главное меню</a>
+						<section class="l_menu hide_menu main_menu head_menu">
 							<ul>
 								<li class="active"><a href="/">главная</a></li>
 								<li><a href="/catalogbrand/">бренды</a></li>
@@ -128,21 +128,21 @@ exit();
 								<li><a href="/vibrator-dlya-dvoikh/">для двоих</a></li>
 								<li><a href="/about/delivery/">доставка и оплата</a></li>
 								<li><a href="/about/faq/">нужно знать</a></li>
-							</ul>            
+							</ul>
 						</section>
 					</li>
-					<li class="sub_mnu">
-						<a href="#" class="menu_part_name">Каталог товаров</a>
-						<section class="hide_menu">
+					<li class="sub_mnu head_sub_mnu">
+						<a href="#" class="menu_part_name menu_part_name_head">Каталог товаров</a>
+						<section class="hide_menu head_menu">
 							<li class="sub_mnu">
 								<section class="l_menu">
 									<header>		<a href="/sex-igrushki/" class="menu_part_name_sub">Секс игрушки</a></header>
 									<ul class="hide_menu_sub">
 										<li>
-											<a href="/sex-igrushki/">Секс игрушки</a>		
+											<a href="/sex-igrushki/">Секс игрушки</a>
 										</li>
 										<li class="active">
-											<a  href="#" class="mnu_catagory_btn">Вибраторы</a>			
+											<a  href="#" class="mnu_catagory_btn">Вибраторы</a>
 											<div class="level_two">
 												<a href="/vibratory/" class="ctg_name">Вибраторы</a>
 												<ul style="height: 84px;">
@@ -165,7 +165,7 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Стимуляторы клитора</a>			
+											<a href="#" class="mnu_catagory_btn">Стимуляторы клитора</a>
 											<div class="level_two">
 												<a href="/stimulyatory-klitora/" class="ctg_name">Стимуляторы клитора</a>
 												<ul>
@@ -179,12 +179,12 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="/stimulyatory-tochki-g/">Стимуляторы точки G</a>			
+											<a href="/stimulyatory-tochki-g/">Стимуляторы точки G</a>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Страпоны</a>	
+											<a href="#" class="mnu_catagory_btn">Страпоны</a>
 											<div class="level_two">
-												<a href="/strapony/" class="ctg_name">Страпоны</a>	
+												<a href="/strapony/" class="ctg_name">Страпоны</a>
 												<ul>
 													<li><a href="/harness-strapon/">Harness</a></li>
 													<li><a href="/bezremnevoy-strapon/">Безремневые</a></li>
@@ -202,7 +202,7 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Фаллоимитаторы</a>			
+											<a href="#" class="mnu_catagory_btn">Фаллоимитаторы</a>
 											<div class="level_two">
 												<a href="/falloimitatory/" class="ctg_name">Фаллоимитаторы</a>
 												<ul>
@@ -222,7 +222,7 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Мастурбаторы и вагины</a>			
+											<a href="#" class="mnu_catagory_btn">Мастурбаторы и вагины</a>
 											<div class="level_two">
 												<a href="/masturbatory-vaginy/" class="ctg_name">Мастурбаторы и вагины</a>
 												<ul>
@@ -240,7 +240,7 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Вакуумные помпы</a>			
+											<a href="#" class="mnu_catagory_btn">Вакуумные помпы</a>
 											<div class="level_two">
 												<a href="/vakuumnye-pompy/" class="ctg_name">Вакуумные помпы</a>
 												<ul>
@@ -252,7 +252,7 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Увеличение пениса</a>			
+											<a href="#" class="mnu_catagory_btn">Увеличение пениса</a>
 											<div class="level_two">
 												<a href="/uvelichenie-penisa/" class="ctg_name">Увеличение пениса</a>
 												<ul>
@@ -267,7 +267,7 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Насадки и кольца</a>			
+											<a href="#" class="mnu_catagory_btn">Насадки и кольца</a>
 											<div class="level_two">
 												<a href="/nasadki-kolca/" class="ctg_name">Насадки и кольца</a>
 												<ul>
@@ -284,10 +284,10 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="/vaginalnye-shariki/">Вагинальные шарики</a>			
+											<a href="/vaginalnye-shariki/">Вагинальные шарики</a>
 										</li>
 										<li>
-											<a href="/kiberkozha/">КиберКожа</a>			
+											<a href="/kiberkozha/">КиберКожа</a>
 										</li>
 									</ul>
 								</section>
@@ -297,13 +297,13 @@ exit();
 									<header>		<a href="/analnie-igrushki/" class="menu_part_name_sub">Анальные игрушки</a></header>
 									<ul class="hide_menu_sub">
 										<li>
-											<a href="/analnie-vibratory/">Анальные вибраторы</a>			
+											<a href="/analnie-vibratory/">Анальные вибраторы</a>
 										</li>
 										<li>
-											<a href="/massagery-prostaty/">Для массажа простаты</a>			
+											<a href="/massagery-prostaty/">Для массажа простаты</a>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Анальные пробки</a>			
+											<a href="#" class="mnu_catagory_btn">Анальные пробки</a>
 											<div class="level_two">
 												<a href="/analnye-probki/" class="ctg_name">Анальные пробки</a>
 												<ul>
@@ -321,13 +321,13 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="/analnye-ukrasheniya/">Анальные украшения</a>			
+											<a href="/analnye-ukrasheniya/">Анальные украшения</a>
 										</li>
 										<li>
-											<a href="/shariki-i-busy/">Шарики и бусы</a>			
+											<a href="/shariki-i-busy/">Шарики и бусы</a>
 										</li>
 										<li>
-											<a href="/analnie-bez-vibratsii/">Без вибрации</a>			
+											<a href="/analnie-bez-vibratsii/">Без вибрации</a>
 										</li>
 									</ul>
 								</section>
@@ -337,13 +337,13 @@ exit();
 									<header>		<a href="#" class="menu_part_name_sub">Секс куклы</a></header>
 									<ul class="hide_menu_sub">
 										<li>
-											<a href="/sex-kukli/">Секс куклы</a>			
+											<a href="/sex-kukli/">Секс куклы</a>
 										</li>
 										<li>
-											<a href="/sex-kukly-dlya-mujchin/">Для мужчин</a>			
+											<a href="/sex-kukly-dlya-mujchin/">Для мужчин</a>
 										</li>
 										<li>
-											<a href="/sex-kukly-dlya-jenshin/">Для женщин</a>			
+											<a href="/sex-kukly-dlya-jenshin/">Для женщин</a>
 										</li>
 									</ul>
 								</section>
@@ -353,28 +353,28 @@ exit();
 									<header>		<a href="#" class="menu_part_name_sub">БДСМ И ФЕТИШ</a></header>
 									<ul class="hide_menu_sub">
 										<li>
-											<a href="/BDSM-i-fetish/">БДСМ И ФЕТИШ</a>			
+											<a href="/BDSM-i-fetish/">БДСМ И ФЕТИШ</a>
 										</li>
 										<li>
-											<a href="/maski-shlemy/">Маски и Шлемы</a>			
+											<a href="/maski-shlemy/">Маски и Шлемы</a>
 										</li>
 										<li>
-											<a href="/klyapy/">Кляпы</a>			
+											<a href="/klyapy/">Кляпы</a>
 										</li>
 										<li>
-											<a href="/osheyniki-povodki/">Ошейники и поводки</a>			
+											<a href="/osheyniki-povodki/">Ошейники и поводки</a>
 										</li>
 										<li>
-											<a href="/naruchniki-fiksatsiya/">Наручники и фиксация</a>			
+											<a href="/naruchniki-fiksatsiya/">Наручники и фиксация</a>
 										</li>
 										<li>
-											<a href="/pleti-shlepalki-knuty/">Плети, шлепалки и кнуты</a>			
+											<a href="/pleti-shlepalki-knuty/">Плети, шлепалки и кнуты</a>
 										</li>
 										<li>
-											<a href="/seks-mashiny/">Секс машины</a>			
+											<a href="/seks-mashiny/">Секс машины</a>
 										</li>
 										<li>
-											<a href="/electrostimulyatory/">Электростимуляция</a>			
+											<a href="/electrostimulyatory/">Электростимуляция</a>
 										</li>
 									</ul>
 								</section>
@@ -384,16 +384,16 @@ exit();
 									<header>		<a href="#" class="menu_part_name_sub">Эротическое белье</a></header>
 									<ul class="hide_menu_sub">
 										<li>
-											<a href="/eroticheskoe-belye/">Эротическое белье</a>			
+											<a href="/eroticheskoe-belye/">Эротическое белье</a>
 										</li>
 										<li>
-											<a href="/platya-sorochki/">Платья, сорочки, юбки</a>			
+											<a href="/platya-sorochki/">Платья, сорочки, юбки</a>
 										</li>
 										<li>
-											<a href="/kombinezony-ketsyuety/">Комбинезоны/кэтсьюэты</a>			
+											<a href="/kombinezony-ketsyuety/">Комбинезоны/кэтсьюэты</a>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Игровые костюмы</a>			
+											<a href="#" class="mnu_catagory_btn">Игровые костюмы</a>
 											<div class="level_two">
 												<a href="/igrovye-kostyumy/" class="ctg_name">Игровые костюмы</a>
 												<ul>
@@ -422,7 +422,7 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Чулки и колготки</a>			
+											<a href="#" class="mnu_catagory_btn">Чулки и колготки</a>
 											<div class="level_two">
 												<a href="/chulki-kolgotki/" class="ctg_name">Чулки и колготки</a>
 												<ul>
@@ -437,7 +437,7 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Нижнее белье</a>			
+											<a href="#" class="mnu_catagory_btn">Нижнее белье</a>
 											<div class="level_two">
 												<a href="/nijnee-bele/" class="ctg_name">Нижнее белье</a>
 												<ul>
@@ -452,13 +452,13 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="/latex/">Латекс и Винил</a>			
+											<a href="/latex/">Латекс и Винил</a>
 										</li>
 										<li>
-											<a href="/korsety/">Корсеты и Боди</a>			
+											<a href="/korsety/">Корсеты и Боди</a>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Аксессуары</a>			
+											<a href="#" class="mnu_catagory_btn">Аксессуары</a>
 											<div class="level_two">
 												<a href="/aksessuary/" class="ctg_name">Аксессуары</a>
 												<ul>
@@ -484,10 +484,10 @@ exit();
 									<header>		<a href="#" class="menu_part_name_sub">Для соблазнения</a></header>
 									<ul class="hide_menu_sub">
 										<li>
-											<a href="/dlya-soblazneniya/">Для соблазнения</a>	
+											<a href="/dlya-soblazneniya/">Для соблазнения</a>
 										</li>
 										<li>
-											<a href="#" class="mnu_catagory_btn">Духи с феромонами</a>			
+											<a href="#" class="mnu_catagory_btn">Духи с феромонами</a>
 											<div class="level_two">
 												<a href="/duhi-s-feromonami/" class="ctg_name">Духи с феромонами</a>
 												<ul>
@@ -502,10 +502,10 @@ exit();
 											</div>
 										</li>
 										<li>
-											<a href="/vozbuzhdayushchie-geli/">Возбуждающие гели</a>			
+											<a href="/vozbuzhdayushchie-geli/">Возбуждающие гели</a>
 										</li>
 										<li>
-											<a href="/dlya-massazha/">Для массажа</a>			
+											<a href="/dlya-massazha/">Для массажа</a>
 										</li>
 									</ul>
 								</section>
@@ -515,25 +515,25 @@ exit();
 									<header>		<a href="#" class="menu_part_name_sub">Лубриканты</a></header>
 									<ul class="hide_menu_sub">
 										<li>
-											<a href="/lyubrikanty/">Лубриканты</a>			
+											<a href="/lyubrikanty/">Лубриканты</a>
 										</li>
 										<li>
-											<a href="/vaginalnie/">Вагинальные</a>			
+											<a href="/vaginalnie/">Вагинальные</a>
 										</li>
 										<li>
-											<a href="/analnye/">Анальные</a>			
+											<a href="/analnye/">Анальные</a>
 										</li>
 										<li>
-											<a href="/analno-vaginalnye/">Анально-вагинальные</a>			
+											<a href="/analno-vaginalnye/">Анально-вагинальные</a>
 										</li>
 										<li>
-											<a href="/oralnye/">Оральные</a>			
+											<a href="/oralnye/">Оральные</a>
 										</li>
 										<li>
-											<a href="/prolongiruyushchie/">Пролонгирующие</a>			
+											<a href="/prolongiruyushchie/">Пролонгирующие</a>
 										</li>
 										<li>
-											<a href="/vozbuzhdayushchie/">Возбуждающие</a>			
+											<a href="/vozbuzhdayushchie/">Возбуждающие</a>
 										</li>
 									</ul>
 								</section>
@@ -543,25 +543,25 @@ exit();
 									<header>		<a href="#" class="menu_part_name_sub">Разные мелочи</a></header>
 									<ul class="hide_menu_sub">
 										<li>
-											<a href="/raznie-melochi/">Разные мелочи</a>			
+											<a href="/raznie-melochi/">Разные мелочи</a>
 										</li>
 										<li>
-											<a href="/dlya-gigieny/">Для гигиены</a>			
+											<a href="/dlya-gigieny/">Для гигиены</a>
 										</li>
 										<li>
-											<a href="/prezervativy/">Презервативы</a>			
+											<a href="/prezervativy/">Презервативы</a>
 										</li>
 										<li>
-											<a href="/batareyki/">Батарейки</a>			
+											<a href="/batareyki/">Батарейки</a>
 										</li>
 										<li>
-											<a href="/zaryadnye-ustroystva/">Зарядные устройства</a>			
+											<a href="/zaryadnye-ustroystva/">Зарядные устройства</a>
 										</li>
 										<li>
-											<a href="/kraski-dlya-tela/">Краски для тела</a>			
+											<a href="/kraski-dlya-tela/">Краски для тела</a>
 										</li>
 										<li>
-											<a href="/dlya-igrushek/">Разное</a>			
+											<a href="/dlya-igrushek/">Разное</a>
 										</li>
 									</ul>
 								</section>
@@ -794,7 +794,7 @@ exit();
 								</section>
 							</li>
 						</section>
-					</li>	
+					</li>
 				</ul>
 			</div>
 			<div class="modal_overlay"></div>
@@ -828,7 +828,7 @@ exit();
 				?>
 			</p>
         </div>
-        
+
         <div class="h_op">
 			<?
 			$APPLICATION->IncludeComponent("bitrix:main.include", "", array(
@@ -841,7 +841,7 @@ exit();
 				)
 			);
 			?>
-            
+
             <div class="callback_popup">
 				<?$APPLICATION->IncludeComponent(
 					"love:main.feedback",
@@ -856,7 +856,7 @@ exit();
 				false
 				);?>
             </div>
-            
+
             <div class="csbanner bn175">
             	<div><?$APPLICATION->IncludeComponent(
 					"bitrix:advertising.banner",
@@ -871,7 +871,7 @@ exit();
 					false
 				);?></div>
             </div>
-            
+
             <div class="csbanner bn410">
             	<div><?$APPLICATION->IncludeComponent(
 					"bitrix:advertising.banner",
@@ -887,7 +887,7 @@ exit();
 				);?></div>
             </div>
         </div>
-        
+
 			<?$APPLICATION->IncludeComponent("bitrix:search.title", "store", array(
 				"NUM_CATEGORIES" => "1",
 				"TOP_COUNT" => "5",
@@ -908,7 +908,7 @@ exit();
 				),
 				false
 			);?>
-        
+
 		<?
 			$APPLICATION->IncludeComponent("bitrix:sale.basket.basket.line", ".default", array(
 				"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
@@ -919,7 +919,7 @@ exit();
 				Array()
 			);
 		?>
-        
+
         <noindex>
         <ul class="sign_in_block">
 			<?$APPLICATION->IncludeComponent("bitrix:system.auth.form", "store", array(
@@ -932,7 +932,7 @@ exit();
 			);?>
         </ul>
     	</noindex>
-        
+
         <nav role="navigation">
 			<?
 				$APPLICATION->IncludeComponent('bitrix:menu', "vertical", array(
